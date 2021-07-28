@@ -1,0 +1,8 @@
+{
+  "name": "docs",
+  "private": true,
+  "homepage": ".",
+  "dependencies": {
+    "vuepress-theme-api": "file:.."
+  }
+}

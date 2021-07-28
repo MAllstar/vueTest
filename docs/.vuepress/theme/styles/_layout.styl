@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+*::selection
+  color: $selection-color
+  background-color: $selection-bg-color
+
+html, body
+  padding: 0
+  margin: 0
+
+.pageHeader
+  width: 100%
+  height: 60px
+  background-color: #2E3336
+  box-shadow: 0px 1px 0px 0px #000000
+  position: fixed
+  z-index: 10
+  background-image: url('/logo.png')
+  background-repeat no-repeat
+  background-size: 120px 40px
+  background-position: 20px 10px
+  border-bottom 1px solid #2E3336
+
+.pageNav
+  height 40px
+  position relative
+  left 174px
+  top 10px
+  border-left 1px solid rgba(255, 255, 255, 0.2)
+  display flex
+  align-items center
+  padding-left 18px
+
+.pageNav .navItem
+  list-style-type none  
+  width 136px
+  height 60px
+  position relative
+  margin 0
+  padding-right 2px
+  display flex
+  align-items center
+  justify-content center
+  font-size 16px
+  font-family PingFangSC-Medium, PingFang SC
+  font-weight 500
+  color #FFFFFF
+  line-height: 22px
+  & .navPopup
+    position absolute
+    top 50px
+    width 150px
+  & .navPopup>ul
+    margin-top 15px
+    background #43474A
+    border-radius 6px
+    box-sizing border-box
+    padding-top 12px
+    padding-bottom 12px
+  & .navPopup>ul>li
+    list-style-type none
+    width 100%
+    height 36px
+    padding 0
+    margin 0
+    display flex
+    align-items center
+    overflow hidden
+    text-overflow ellipsis
+    white-space nowrap
+    &:hover
+      background rgba(255, 255, 255, 0.1)
+  & .navPopup>ul>li>a 
+    margin-left 20px
+    height: 20px;
+    font-size: 14px;
+    font-family: DINPro-Medium, DINPro;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 18px; 
+  &:hover
+    cursor pointer 
+    border-bottom 2px solid #DE5759
+
+.internationalize
+  position fixed
+  top 10
+
+input,
+button
+  border: none
+  outline: none
+
+  &:focus
+    outline: none
+
+ol,
+ul
+  padding-left: 0
+  list-style: none
+li
+  list-style-type: circle
+  margin-left: 20px
+  padding-left: 4px
+
+
+//
+// anchor
+//
+a.header-anchor
+  position: absolute
+  margin-left: -1em
+  margin-top: 0.2em
+  padding-right: 0.5em
+  font-size 0.8em
+  font-weight: 400
+  opacity 0
+
+  &:hover
+    text-decoration none
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  position: relative
+
+  &:hover .header-anchor
+    opacity: 1
+
+blockquote
+  padding: 0.8rem 1.6rem
+  border-left: 5px solid $black
+  color: #888
+  margin: 20px 0px
+
+  p
+    color: $black
+
+    &:last-child
+      margin-bottom: 0
+
+table
+  width: 100%
+  max-width: 100%
+  margin-bottom: 1rem
+  background: #0000
+
+table,
+th,
+td
+  border: 1px solid $divider-color
+
+th,
+td
+  padding: .75rem
+
+.content.custom > h1,
+.content.custom > h2,
+.content.custom > h3,
+.content.custom > h4,
+.content.custom > h5,
+.content.custom > h6
+  margin-top: 1.25em
+
+.content.custom h1:first-child,
+.content.custom h2:first-child,
+.content.custom h3:first-child
+  margin-top: 0
